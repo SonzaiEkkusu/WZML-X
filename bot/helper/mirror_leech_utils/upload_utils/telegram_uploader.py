@@ -488,8 +488,8 @@ class TelegramUploader:
                     thumb = None
                 self._sent_msg = await self._sent_msg.reply_video(
                     video=self._up_path,
-                    quote=True,
-                    caption=cap_mono,
+                    quote=False,
+                    caption=None,
                     duration=duration,
                     width=width,
                     height=height,
@@ -522,8 +522,8 @@ class TelegramUploader:
                     return
                 self._sent_msg = await self._sent_msg.reply_photo(
                     photo=self._up_path,
-                    quote=True,
-                    caption=cap_mono,
+                    quote=False,
+                    caption=None,
                     disable_notification=True,
                     progress=self._upload_progress,
                 )
